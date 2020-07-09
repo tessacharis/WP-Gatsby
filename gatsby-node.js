@@ -9,6 +9,8 @@ const getTemplates = () => {
   return glob.sync(`./src/templates/**/*.js`, { cwd: sitePath })
 }
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
+
 //
 // @todo move this to gatsby-theme-wordpress
 exports.createPages = async ({ actions, graphql, reporter }) => {
